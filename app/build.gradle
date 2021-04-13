@@ -11,8 +11,8 @@ android {
         applicationId "com.chillibits.composenumberpickersample"
         minSdk 21
         targetSdk 30
-        versionCode library_version_code
-        versionName library_version
+        versionCode libraryVersionCode
+        versionName libraryVersion
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

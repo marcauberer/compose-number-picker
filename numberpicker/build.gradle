@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'org.jetbrains.dokka'
 }
 
 android {
@@ -10,8 +11,8 @@ android {
     defaultConfig {
         minSdk 21
         targetSdk 30
-        versionCode library_version_code
-        versionName library_version
+        versionCode libraryVersionCode
+        versionName libraryVersion
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -41,9 +42,9 @@ dependencies {
     implementation 'com.google.android.material:material:1.3.0'
 
     // Jetpack Compose
-    api "androidx.compose.ui:ui:$compose_version"
-    api "androidx.compose.ui:ui-tooling:$compose_version"
-    api "androidx.compose.material:material:$compose_version"
+    api "androidx.compose.ui:ui:$composeVersion"
+    api "androidx.compose.ui:ui-tooling:$composeVersion"
+    api "androidx.compose.material:material:$composeVersion"
     api 'androidx.constraintlayout:constraintlayout-compose:1.0.0-alpha05'
     api 'androidx.activity:activity-compose:1.3.0-alpha06'
 
@@ -51,4 +52,12 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}
+
+dokkaHtml.configure {
+    dokkaSourceSets {}
+}
+
+if (project.hasProperty('pushall') || project.hasProperty('library_only')) {
+    apply from: '../gradle-release.gradle'
 }
