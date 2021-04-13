@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3DDC84</color>
-    <color name="colorPrimaryVariant">#32B56C</color>
+    <color name="colorPrimary">#313131</color>
+    <color name="colorPrimaryVariant">#202020</color>
     <color name="colorSecondary">#CC950B</color>
     <color name="colorSecondaryVariant">#A17609</color>
     <color name="colorOnPrimary">@android:color/white</color>
     <color name="colorOnSecondary">@android:color/white</color>
-    <color name="colorOnBackground">@android:color/black</color>
+    <color name="colorOnBackground">@android:color/white</color>
 </resources>
