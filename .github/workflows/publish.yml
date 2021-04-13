@@ -1,0 +1,44 @@
+# Workflow for Android CI release
+
+name: Publish to Artifactory
+
+on:
+  release:
+    types: [ published ]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get version name
+        id: get_version
+        uses: battila7/get-version-action@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false  # Avoids messing up PagesDeployAction
+      - name: Configure JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: Make gradlew executable
+        run: chmod +x gradlew
+      - name: Prepare publishing environment
+        run: mkdir ~/.gradle && echo "$ARTIFACTORY_CREDENTIALS" > ./numberpicker/gradle.properties
+        env:
+          ARTIFACTORY_CREDENTIALS: ${{ secrets.ARTIFACTORY_CREDENTIALS }}
+      - name: Publish Dev
+        if: ${{ contains(steps.get_version.outputs.version, 'alpha') }}
+        run: ./gradlew numberpicker:assemble dokkaHtml
+      - name: Publish
+        if: ${{ !contains(steps.get_version.outputs.version, 'alpha') }}
+        run: ./gradlew numberpicker:assemble -PparamEnv=RELEASE dokkaHtml
+      - name: Deploy Documentation
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: numberpicker/build/dokka/html
+          TARGET_FOLDER: docs
+          CLEAN: true

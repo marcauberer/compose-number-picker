@@ -1,0 +1,24 @@
+# Workflow for Android CI debug build
+
+name: Android CI
+
+on:
+  push:
+  pull_request:
+    branches: [ main, dev ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Make gradlew executable
+      run: chmod +x ./gradlew
+    - name: Prepare publishing environment
+      run: mkdir ~/.gradle && echo "$ARTIFACTORY_CREDENTIALS" > ./simplesettings/gradle.properties
+      env:
+        ARTIFACTORY_CREDENTIALS: ${{ secrets.ARTIFACTORY_CREDENTIALS }}
+    - name: Android Build
+      run: ./gradlew assembleDebug
