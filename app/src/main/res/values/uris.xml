@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © Marc Auberer 2021. All rights reserved
+  -->
+
+<resources>
+    <string name="github_link" translatable="false">https://github.com/marcauberer/compose-number-picker</string>
+</resources>

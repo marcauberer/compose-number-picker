@@ -6,4 +6,5 @@
 <resources>
     <string name="horizontal_picker">Sélection horizontale</string>
     <string name="vertical_picker">Sélection verticale</string>
+    <string name="show_on_github">Montrer sur GitHub</string>
 </resources>

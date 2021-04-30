@@ -4,8 +4,12 @@
 
 package com.chillibits.composenumberpickersample
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.Gravity
+import android.view.Menu
+import android.view.MenuItem
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.animation.expandHorizontally
@@ -23,6 +27,7 @@ import com.chillibits.composenumberpicker.HorizontalNumberPicker
 import com.chillibits.composenumberpicker.VerticalNumberPicker
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, true)
@@ -65,5 +70,23 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_activity_main, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.action_github -> openGitHubPage()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun openGitHubPage() {
+        startActivity(Intent(Intent.ACTION_VIEW).apply {
+            data = Uri.parse(getString(R.string.github_link))
+        })
     }
 }
