@@ -7,7 +7,7 @@ buildscript {
         libraryVersion = '1.0.0'
         libraryVersionCode = 1000
         kotlinVersion = '1.4.32'
-        composeVersion = '1.0.0-beta04'
+        composeVersion = '1.0.0-beta05'
     }
     repositories {
         google()

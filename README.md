@@ -2,7 +2,6 @@
 ![GitHub release](https://img.shields.io/github/v/release/marcauberer/compose-number-picker?include_prereleases)
 ![Android CI](https://github.com/marcauberer/compose-number-picker/workflows/Android%20CI/badge.svg)
 [![API](https://img.shields.io/badge/API-21%2B-red.svg?style=flat)](https://android-arsenal.com/api?level=21)
-[![Article on Medium](https://aleen42.github.io/badges/src/medium.svg)](https://medium.com/swlh/simple-settings-library-build-a-settings-screen-in-seconds-5b6394fbd2fc)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 Compose Number Picker is a library, which provides a simple to use, lightweight number picker component for Jetpack Compose. It has support for horizontal and vertical orientation.
@@ -29,7 +28,7 @@ HorizontalNumberPicker(
     modifier = Modifier.padding(10.dp)
 )
 ```
-If you need an example, please look into the [code](./app/src/main/java/com/chillibits/composenumberpickersample/MainActivity.kt) of the demo app.
+If you need an example, please look into the [code](./app/src/main/java/com/chillibits/composenumberpickersample/MainActivity.kt#L35) of the demo app.
 
 ## Supported languages
 Here are the currently supported languages for the demo app. The library itself is language independent.
