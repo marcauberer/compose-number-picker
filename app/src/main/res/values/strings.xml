@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name" translatable="false">Number Picker</string>
-    <string name="horizontal_picker">Horizontal picker</string>
-    <string name="vertical_picker">Vertical picker</string>
+    <string name="horizontal_picker">Horizontal selection</string>
+    <string name="vertical_picker">Vertical selection</string>
 </resources>
