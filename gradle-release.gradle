@@ -1,3 +1,7 @@
+/*
+ * Copyright © Marc Auberer 2021. All rights reserved
+ */
+
 apply plugin: 'maven-publish'
 apply plugin: 'signing'
 

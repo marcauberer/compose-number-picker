@@ -1,3 +1,7 @@
+/*
+ * Copyright © Marc Auberer 2021. All rights reserved
+ */
+
 package com.chillibits.composenumberpickersample
 
 import androidx.compose.foundation.isSystemInDarkTheme

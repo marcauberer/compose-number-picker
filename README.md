@@ -11,7 +11,7 @@ Compose Number Picker is a library, which provides a simple to use, lightweight 
 If you want to test the library, please visit the sample app on [Google Play](https://play.google.com/store/apps/details?id=com.chillibits.composenumberpickersample)!
 
 ## Screenshots (Android 11)
-<img src="https://github.com/marcauberer/compose-number-picker/raw/main/media/screenshots/screen1.png" width="205" title="Screenshot 1"> <img src="https://github.com/marcauberer/compose-number-picker/raw/main/media/screenshots/screen2.png" width="205" title="Screenshot 2"> <img src="https://github.com/marcauberer/compose-number-picker/raw/main/media/screenshots/screen3.png" width="205" title="Screenshot 3"> <img src="https://github.com/marcauberer/compose-number-picker/raw/main/media/screenshots/screen4.png" width="205" title="Screenshot 4">
+<img src="https://github.com/marcauberer/compose-number-picker/raw/main/media/screenshots/screen1.png" width="205" title="Screenshot 1">
 
 ## Usage
 If you haven't Jetpack Compose ready to go in your project, please refer to [this guide](https://developer.android.com/jetpack/compose/setup) to include Jetpack Compose into your project.

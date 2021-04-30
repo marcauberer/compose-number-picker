@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © Marc Auberer 2021. All rights reserved
+  -->
+
 <resources>
     <string name="horizontal_picker">Horizontale Auswahl</string>
     <string name="vertical_picker">Vertikale Auswahl</string>

@@ -1,3 +1,7 @@
+/*
+ * Copyright © Marc Auberer 2021. All rights reserved
+ */
+
 buildscript {
     ext {
         libraryVersion = '1.0.0'

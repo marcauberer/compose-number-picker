@@ -1,3 +1,7 @@
+<!--
+  ~ Copyright © Marc Auberer 2021. All rights reserved
+  -->
+
 <resources>
     <string name="app_name" translatable="false">Number Picker</string>
     <string name="horizontal_picker">Horizontal selection</string>
