@@ -4,8 +4,8 @@
 
 buildscript {
     ext {
-        libraryVersion = '1.0.0'
-        libraryVersionCode = 1000
+        libraryVersion = "$VERSION"
+        libraryVersionCode = Integer.parseInt(rootProject.properties["VERSION_CODE"])
         kotlinVersion = '1.4.32'
         composeVersion = '1.0.0-beta05'
     }
