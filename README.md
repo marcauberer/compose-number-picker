@@ -1,4 +1,5 @@
 # Compose Number Picker Library for Android
+[![Maven Central](https://img.shields.io/maven-central/v/com.chillibits/composenumberpicker.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.chillibits%22%20AND%20a:%22composenumberpicker%22)
 ![GitHub release](https://img.shields.io/github/v/release/marcauberer/compose-number-picker?include_prereleases)
 ![Android CI](https://github.com/marcauberer/compose-number-picker/workflows/Android%20CI/badge.svg)
 [![API](https://img.shields.io/badge/API-21%2B-red.svg?style=flat)](https://android-arsenal.com/api?level=21)
@@ -14,6 +15,11 @@ If you want to test the library, please visit the sample app on [Google Play](ht
 
 ## Usage
 If you haven't Jetpack Compose ready to go in your project, please refer to [this guide](https://developer.android.com/jetpack/compose/setup) to include Jetpack Compose into your project.
+
+Then include ComposeNumberPicker to your project:
+```groovy
+implementation 'com.chillibits:composenumberpicker:1.0.2'
+```
 
 As Compose Number Picker supports horizontal and vertical orientation, it provides two components for use:
 -   HorizontalNumberPicker [view component](./numberpicker/src/main/java/com/chillibits/composenumberpicker/HorizontalNumberPicker.kt)
