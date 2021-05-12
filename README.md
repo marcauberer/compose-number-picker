@@ -18,7 +18,7 @@ If you haven't Jetpack Compose ready to go in your project, please refer to [thi
 
 Then include ComposeNumberPicker to your project:
 ```groovy
-implementation 'com.chillibits:composenumberpicker:1.0.2'
+implementation 'com.chillibits:composenumberpicker:1.0.3'
 ```
 
 As Compose Number Picker supports horizontal and vertical orientation, it provides two components for use:
