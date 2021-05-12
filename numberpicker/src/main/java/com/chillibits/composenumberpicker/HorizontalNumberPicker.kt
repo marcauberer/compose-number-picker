@@ -19,14 +19,15 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-@Preview(name="Horizontal number picker")
+@Preview(name = "Horizontal number picker")
 @Composable
-public fun HorizontalNumberPicker(
+fun HorizontalNumberPicker(
     modifier: Modifier = Modifier,
     height: Dp = 45.dp,
     min: Int = 0,
     max: Int = 10,
-    default: Int = min
+    default: Int = min,
+    onValueChange: (Int) -> Unit = {}
 ) {
     val number = remember { mutableStateOf(default) }
 
@@ -36,6 +37,7 @@ public fun HorizontalNumberPicker(
             drawable = R.drawable.ic_arrow_left,
             onClick = {
                 if (number.value > min) number.value--
+                onValueChange(number.value)
             }
         )
         Text(
@@ -50,6 +52,7 @@ public fun HorizontalNumberPicker(
             drawable = R.drawable.ic_arrow_right,
             onClick = {
                 if (number.value < max) number.value++
+                onValueChange(number.value)
             }
         )
     }

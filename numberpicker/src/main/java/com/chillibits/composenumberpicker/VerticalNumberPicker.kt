@@ -21,12 +21,13 @@ import androidx.compose.ui.unit.sp
 
 @Preview(name = "Vertical number picker")
 @Composable
-public fun VerticalNumberPicker(
+fun VerticalNumberPicker(
     modifier: Modifier = Modifier,
     width: Dp = 45.dp,
     min: Int = 0,
     max: Int = 10,
-    default: Int = min
+    default: Int = min,
+    onValueChange: (Int) -> Unit = {},
 ) {
     val number = remember { mutableStateOf(default) }
 
@@ -36,12 +37,14 @@ public fun VerticalNumberPicker(
             drawable = R.drawable.ic_arrow_up,
             onClick = {
                 if (number.value < max) number.value++
+                onValueChange(number.value)
             }
         )
         Text(
             text = number.value.toString(),
             fontSize = (width.value / 2).sp,
-            modifier = Modifier.padding(10.dp)
+            modifier = Modifier
+                .padding(10.dp)
                 .width(IntrinsicSize.Max)
                 .align(CenterHorizontally)
         )
@@ -50,6 +53,7 @@ public fun VerticalNumberPicker(
             drawable = R.drawable.ic_arrow_down,
             onClick = {
                 if (number.value > min) number.value--
+                onValueChange(number.value)
             }
         )
     }

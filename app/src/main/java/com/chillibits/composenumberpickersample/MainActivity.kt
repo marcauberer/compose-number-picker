@@ -9,6 +9,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.Column
@@ -55,7 +56,10 @@ class MainActivity : AppCompatActivity() {
                         HorizontalNumberPicker(
                             min = 10,
                             max = 100,
-                            default = 50
+                            default = 50,
+                            onValueChange = { value ->
+                                Toast.makeText(this@MainActivity, value.toString(), Toast.LENGTH_SHORT).show()
+                            }
                         )
                         Text(
                             text = getString(R.string.vertical_picker),
@@ -63,7 +67,10 @@ class MainActivity : AppCompatActivity() {
                         VerticalNumberPicker(
                             min = 20,
                             max=30,
-                            default = 20
+                            default = 20,
+                            onValueChange = { value ->
+                                Toast.makeText(this@MainActivity, value.toString(), Toast.LENGTH_SHORT).show()
+                            }
                         )
                     }
                 }
