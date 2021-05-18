@@ -31,7 +31,10 @@ HorizontalNumberPicker(
     min = 10,
     max = 100,
     default = 50,
-    modifier = Modifier.padding(10.dp)
+    modifier = Modifier.padding(10.dp),
+	onValueChange = { value ->
+		Toast.makeText(this@MainActivity, value.toString(), Toast.LENGTH_SHORT).show()
+	}
 )
 ```
 If you need an example, please look into the [code](./app/src/main/java/com/chillibits/composenumberpickersample/MainActivity.kt#L35) of the demo app.
