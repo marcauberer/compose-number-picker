@@ -9,12 +9,10 @@ ext["signing.keyId"] = project.hasProperty('sonatype.gpg.key') ? project.propert
 ext["signing.password"] = project.hasProperty('sonatype.gpg.password') ? project.property('sonatype.gpg.password') : System.getenv('SONATYPE_GPG_PASS')
 ext["signing.secretKeyRingFile"] = project.hasProperty('sonatype.gpg.secretKeyRingFile') ? project.property('sonatype.gpg.secretKeyRingFile') : System.getenv('SONATYPE_GPG_FILE')
 
-@SuppressWarnings("GroovyUnusedDeclaration")
 def getRepositoryUsername() {
     return project.hasProperty('NEXUS_USERNAME') ? project.property('NEXUS_USERNAME') : System.getenv('NEXUS_USERNAME')
 }
 
-@SuppressWarnings("GroovyUnusedDeclaration")
 def getRepositoryPassword() {
     return project.hasProperty('NEXUS_PASSWORD') ? project.property('NEXUS_PASSWORD') : System.getenv('NEXUS_PASSWORD')
 }
