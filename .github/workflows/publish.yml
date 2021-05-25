@@ -36,7 +36,7 @@ jobs:
         run: ./gradlew numberpicker:assembleRelease
 
       - name: Publish to MavenCentral
-        run: ./gradlew numberpicker:publishReleasePublicationToSonatypeRepository -Plibrary_only --no-configure-on-demand --no-parallel dokkaHtml
+        run: ./gradlew numberpicker:publishReleasePublicationToSonatypeRepository -Plibrary_only --warning-mode all --no-configure-on-demand --no-parallel dokkaHtml
         env:
           NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
           NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
