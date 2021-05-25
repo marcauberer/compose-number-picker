@@ -37,10 +37,6 @@ android {
     buildFeatures {
         compose true
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion composeVersion
-        kotlinCompilerVersion '1.4.32'
-    }
 
     // specify the artifactId as module-name for kotlin
     kotlinOptions.freeCompilerArgs += ["-module-name", POM_ARTIFACT_ID]
