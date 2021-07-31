@@ -35,6 +35,7 @@ fun HorizontalNumberPicker(
         PickerButton(
             size = height,
             drawable = R.drawable.ic_arrow_left,
+            enabled = number.value > min,
             onClick = {
                 if (number.value > min) number.value--
                 onValueChange(number.value)
@@ -50,6 +51,7 @@ fun HorizontalNumberPicker(
         PickerButton(
             size = height,
             drawable = R.drawable.ic_arrow_right,
+            enabled = number.value < max,
             onClick = {
                 if (number.value < max) number.value++
                 onValueChange(number.value)
