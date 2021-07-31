@@ -35,6 +35,7 @@ fun VerticalNumberPicker(
         PickerButton(
             size = width,
             drawable = R.drawable.ic_arrow_up,
+            enabled = number.value < max,
             onClick = {
                 if (number.value < max) number.value++
                 onValueChange(number.value)
@@ -51,6 +52,7 @@ fun VerticalNumberPicker(
         PickerButton(
             size = width,
             drawable = R.drawable.ic_arrow_down,
+            enabled = number.value > min,
             onClick = {
                 if (number.value > min) number.value--
                 onValueChange(number.value)

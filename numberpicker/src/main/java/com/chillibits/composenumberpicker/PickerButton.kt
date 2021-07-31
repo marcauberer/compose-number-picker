@@ -16,6 +16,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -24,16 +25,23 @@ import androidx.compose.ui.unit.dp
 
 @Preview(name="Picker button")
 @Composable
-fun PickerButton(size: Dp = 45.dp, @DrawableRes drawable: Int = R.drawable.ic_arrow_left, onClick: () -> Unit = {}) {
+fun PickerButton(
+    size: Dp = 45.dp,
+    @DrawableRes drawable: Int = R.drawable.ic_arrow_left,
+    enabled: Boolean = true,
+    onClick: () -> Unit = {}
+) {
     val contentDescription = LocalContext.current.resources.getResourceName(drawable)
+    val backgroundColor = if (enabled) MaterialTheme.colors.secondary else Color.LightGray
 
     Image(
         painter = painterResource(id = drawable),
         contentDescription = contentDescription,
-        modifier = Modifier.padding(8.dp).background(MaterialTheme.colors.secondary, CircleShape)
+        modifier = Modifier.padding(8.dp).background(backgroundColor, CircleShape)
             .clip(CircleShape)
             .width(size).height(size)
             .clickable (
+                enabled = enabled,
                 onClick = { onClick() }
             )
     )
