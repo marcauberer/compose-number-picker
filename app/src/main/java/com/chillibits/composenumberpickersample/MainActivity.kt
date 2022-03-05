@@ -1,5 +1,5 @@
 /*
- * Copyright © Marc Auberer 2021. All rights reserved
+ * Copyright © Marc Auberer 2021-2022. All rights reserved
  */
 
 package com.chillibits.composenumberpickersample
@@ -78,7 +78,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_activity_main, menu)
         return super.onCreateOptionsMenu(menu)
     }
