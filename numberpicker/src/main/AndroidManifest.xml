@@ -3,7 +3,6 @@
   ~ Copyright © Marc Auberer 2021-2022. All rights reserved
   -->
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.chillibits.composenumberpicker">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
 </manifest>
