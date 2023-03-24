@@ -33,11 +33,11 @@ android {
         compose true
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
     }
     composeOptions {
         kotlinCompilerExtensionVersion composeVersion
@@ -51,7 +51,7 @@ android {
 dependencies {
     // Base dependencies
     implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
 
     // Google dependencies
     implementation 'com.google.android.material:material:1.8.0'
@@ -61,7 +61,7 @@ dependencies {
     api "androidx.compose.ui:ui-tooling:$composeVersion"
     api "androidx.compose.material:material:$composeVersion"
     api 'androidx.constraintlayout:constraintlayout-compose:1.0.1'
-    api 'androidx.activity:activity-compose:1.6.1'
+    api 'androidx.activity:activity-compose:1.7.0'
 
     // Test dependencies
     testImplementation 'junit:junit:4.13.2'
