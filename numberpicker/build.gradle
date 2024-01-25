@@ -61,7 +61,7 @@ dependencies {
     api "androidx.compose.ui:ui-tooling:$composeVersion"
     api "androidx.compose.material:material:$composeVersion"
     api 'androidx.constraintlayout:constraintlayout-compose:1.0.1'
-    api 'androidx.activity:activity-compose:1.7.2'
+    api 'androidx.activity:activity-compose:1.8.2'
 
     // Test dependencies
     testImplementation 'junit:junit:4.13.2'
